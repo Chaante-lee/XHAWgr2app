@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         val navCourses = findViewById<TextView>(R.id.navCourses)
         val navQuote = findViewById<TextView>(R.id.navQuote)
         val navContact = findViewById<TextView>(R.id.navContact)
-        val btnQuote = findViewById<Button>(R.id.btnQuote)
 
         // Navigation clicks
         navHome.setOnClickListener {
@@ -35,8 +34,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ContactActivity::class.java))
         }
 
-        btnQuote.setOnClickListener {
-            startActivity(Intent(this, QuoteActivity::class.java))
-        }
+
     }
 }

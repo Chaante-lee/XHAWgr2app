@@ -1,132 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="#f4f6f8"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <!-- HEADER -->
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="142dp"
-        android:background="#1f2d3d"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#f4f6f8">
 
-        <!-- LOGO -->
-        <ImageView
-            android:id="@+id/logoImage"
-            android:layout_width="49dp"
-            android:layout_height="53dp"
-            android:contentDescription="Logo"
-            android:src="@drawable/_000118875" />
-
-        <!-- APP NAME -->
-
-        <!-- NAVIGATION -->
-        <!-- PARENT LAYOUT -->
+        <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="84dp"
+            android:layout_height="wrap_content"
             android:background="#1f2d3d"
-            android:orientation="vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-            <!-- TITLE / LOGO -->
-            <TextView
-                android:layout_width="332dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:gravity="center"
-                android:text="Empowering the Nation"
-                android:textColor="#FFFFFF"
-                android:textSize="19sp"
-                android:textStyle="bold" />
+            <!-- LOGO -->
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="49dp"
+                android:layout_height="53dp"
+                android:contentDescription="Logo"
+                android:src="@drawable/_000118875" />
 
-            <!-- NAVIGATION -->
+            <!-- TITLE + NAVIGATION -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="62dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/navHome"
+                <!-- TITLE / LOGO -->
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#3F51B5"
-                    android:padding="10dp"
-                    android:text="Home"
-                    android:textColor="#FFFFFF" />
+                    android:gravity="center"
+                    android:text="Empowering the Nation"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/navCourses"
-                    android:layout_width="wrap_content"
+                <!-- NAVIGATION -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#3F51B5"
-                    android:padding="10dp"
-                    android:text="Courses"
-                    android:textColor="#FFFFFF" />
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/navQuote"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#3F51B5"
-                    android:padding="10dp"
-                    android:text="Get Quote"
-                    android:textColor="#FFFFFF" />
+                    <Button
+                        android:id="@+id/navHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#3F51B5"
+                        android:padding="10dp"
+                        android:text="Home"
+                        android:textColor="#FFFFFF" />
 
-                <Button
-                    android:id="@+id/navContact"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#3F51B5"
-                    android:padding="10dp"
-                    android:text="Contact"
-                    android:textColor="#FFFFFF" />
+                    <Button
+                        android:id="@+id/navQuote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#3F51B5"
+                        android:padding="10dp"
+                        android:text="Get Quote"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/navContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#3F51B5"
+                        android:padding="10dp"
+                        android:text="Contact"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
             </LinearLayout>
-
         </LinearLayout>
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="20dp">
-
-        <TextView
-            android:layout_width="288dp"
-            android:layout_height="111dp"
-            android:gravity="center"
-            android:text="Empowering Skills. Changing Lives."
-            android:textColor="#2c3e50"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="183dp"
+        <!-- MAIN CONTENT -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:orientation="vertical"
             android:gravity="center"
-            android:text="We provide training for domestic workers, gardeners and unemployed individuals."
-            android:textColor="#555555"
-            android:textSize="16sp" />
+            android:padding="20dp">
 
-        <Button
-            android:id="@+id/btnQuote"
-            android:layout_width="111dp"
-            android:layout_height="62dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#FFA550"
-            android:text="Get a Quote"
-            android:textColor="#FFFFFF" />
+            <TextView
+                android:layout_width="307dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Empowering Skills. Changing Lives."
+                android:textColor="#2c3e50"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- BORDER BOXES -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/text_border"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/txtTitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quality Training"
+                    android:textColor="#2c3e50"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDescription1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Professional courses designed to provide practical skills for real-world employment"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/text_border"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/txtTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expert Instructors"
+                    android:textColor="#2c3e50"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDescription2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Learn from experienced professionals with industry knowledge and expertise"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/text_border"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/txtTitle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Certified Programs"
+                    android:textColor="#2c3e50"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDescription3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Receive recognized certification upon successful completion of courses"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/text_border"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/txtTitle4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Career Growth"
+                    android:textColor="#2c3e50"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDescription4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Build skills that open doors to better employment opportunities"
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/navCourses"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FF8C00"
+                android:text="Browse Courses"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Why choose us?"
+                android:textColor="#555555"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="We are committed to providing quality education and training that makes a real difference in people's lives."
+                android:textColor="#555555"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp" />
+
+        </LinearLayout>
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>
