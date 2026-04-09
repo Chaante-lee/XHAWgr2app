@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:id="@+id/feesHeader"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#1F2A35"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/btnBackFromFees"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/back_arrow_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Fee Calculator"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/feesHeader"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Courses"
+                android:textColor="#1F2A35"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose multiple courses to unlock discounts!"
+                android:textColor="#FF9800"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="#F8F9FA"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Six-Month Courses (R1500 each)"
+                        android:textColor="#1F2A35"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp"/>
+
+                    <CheckBox android:id="@+id/cbFirstAid" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="First Aid" android:textColor="#1F2A35"/>
+                    <CheckBox android:id="@+id/cbSewing" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sewing" android:textColor="#1F2A35"/>
+                    <CheckBox android:id="@+id/cbLandscaping" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Landscaping" android:textColor="#1F2A35"/>
+                    <CheckBox android:id="@+id/cbLifeSkills" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Life Skills" android:textColor="#1F2A35"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DDDDDD" android:layout_marginVertical="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Six-Week Courses (R750 each)"
+                        android:textColor="#1F2A35"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp"/>
+
+                    <CheckBox android:id="@+id/cbChildMinding" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Child Minding" android:textColor="#1F2A35"/>
+                    <CheckBox android:id="@+id/cbCooking" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cooking" android:textColor="#1F2A35"/>
+                    <CheckBox android:id="@+id/cbGardenMaintenance" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Garden Maintenance" android:textColor="#1F2A35"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="#1F2A35">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/txtRunningTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total Amount: R 0.00"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/txtDiscountNote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No discount applied yet"
+                        android:textColor="#FF9800"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnCalculateAndProceed"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:text="GENERATE FINAL QUOTE"
+                android:textStyle="bold"
+                android:backgroundTint="#FF9800"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prices include 15% VAT"
+                android:textColor="#999999"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="40dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

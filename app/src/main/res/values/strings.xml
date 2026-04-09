@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ETN</string>
+    <string-array name="inquiry_types">
+        <item>Select inquiry type</item>
+        <item>General Inquiry</item>
+        <item>Course Information</item>
+        <item>Quote Request</item>
+        <item>Other</item>
+    </string-array>
+</resources>
