@@ -56,7 +56,7 @@
                         android:id="@+id/navHome"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="#3F51B5"
+                        android:backgroundTint="#FF8C00"
                         android:padding="10dp"
                         android:text="Home"
                         android:textColor="#FFFFFF" />
@@ -65,7 +65,7 @@
                         android:id="@+id/navQuote"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="#3F51B5"
+                        android:backgroundTint="#FF8C00"
                         android:padding="10dp"
                         android:text="Get Quote"
                         android:textColor="#FFFFFF" />
@@ -74,7 +74,7 @@
                         android:id="@+id/navContact"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="#3F51B5"
+                        android:backgroundTint="#FF8C00"
                         android:padding="10dp"
                         android:text="Contact"
                         android:textColor="#FFFFFF" />
@@ -91,12 +91,21 @@
             android:padding="20dp">
 
             <TextView
-                android:layout_width="307dp"
+                android:layout_width="411dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Empowering Skills. Changing Lives."
+                android:text="Through Quality Skills Training."
                 android:textColor="#2c3e50"
                 android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Professional development courses for unemployed individuals, domestic workers, and gardeners. Build your skills and create a brighter future."
+                android:textColor="#2c3e50"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <!-- BORDER BOXES -->
@@ -209,6 +218,7 @@
                     android:textColor="#555555"
                     android:textSize="14sp" />
             </LinearLayout>
+
 
             <Button
                 android:id="@+id/navCourses"

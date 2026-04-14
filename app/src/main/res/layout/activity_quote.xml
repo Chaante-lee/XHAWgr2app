@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f6f8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:background="#1f2d3d"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="49dp"
+                android:layout_height="53dp"
+                android:contentDescription="Logo"
+                android:src="@drawable/_000118875" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Empowering the Nation"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/navHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FF8C00"
+                        android:text="Home"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/navQuote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FF8C00"
+                        android:text="Get Quote"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/navContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FF8C00"
+                        android:text="Contact"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- CONTENT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get a Quote"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#2c3e50"
+                android:layout_gravity="center"
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Courses"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2c3e50"/>
+
+            <!-- COURSES -->
+            <CheckBox
+                android:id="@+id/course1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Child Minding - R750"/>
+
+            <CheckBox
+                android:id="@+id/course2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cooking - R750"/>
+
+            <CheckBox
+                android:id="@+id/course3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Garden Maintenance - R750"/>
+
+            <CheckBox
+                android:id="@+id/course4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Aid - R1500"/>
+
+            <CheckBox
+                android:id="@+id/course5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sewing - R1500"/>
+
+            <CheckBox
+                android:id="@+id/course6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Landscaping - R1500"/>
+
+            <CheckBox
+                android:id="@+id/course7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Life Skills - R1500"/>
+
+            <!-- FORM -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/form_border"
+                android:padding="16dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Details"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#2c3e50"/>
+
+                <EditText
+                    android:id="@+id/nameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full Name"/>
+
+                <EditText
+                    android:id="@+id/phoneInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone Number"
+                    android:inputType="phone"/>
+
+                <EditText
+                    android:id="@+id/emailInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress"/>
+
+            </LinearLayout>
+
+            <!-- BUTTON -->
+            <Button
+                android:id="@+id/calcButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculate Total"
+                android:backgroundTint="#FF8C00"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"/>
+
+            <!-- RESULT -->
+            <TextView
+                android:id="@+id/totalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total: R0"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2c3e50"
+                android:paddingTop="16dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -3,7 +3,6 @@ package com.example.group2app
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -12,28 +11,35 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val navHome = findViewById<TextView>(R.id.navHome)
-        val navCourses = findViewById<TextView>(R.id.navCourses)
-        val navQuote = findViewById<TextView>(R.id.navQuote)
-        val navContact = findViewById<TextView>(R.id.navContact)
+        // ✅ NAV BUTTONS
+        val navHome = findViewById<Button>(R.id.navHome)
+        val navQuote = findViewById<Button>(R.id.navQuote)
+        val navContact = findViewById<Button>(R.id.navContact)
+        val navCourses = findViewById<Button>(R.id.navCourses)
 
-        // Navigation clicks
+        // ✅ HOME (reloads current page)
         navHome.setOnClickListener {
-            // Already on home
+            // already on home, so just refresh
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
-        navCourses.setOnClickListener {
-            startActivity(Intent(this, CoursesActivity::class.java))
-        }
 
+        // ✅ GO TO QUOTE PAGE
         navQuote.setOnClickListener {
-            startActivity(Intent(this, QuoteActivity::class.java))
+            val intent = Intent(this, QuoteActivity::class.java)
+            startActivity(intent)
         }
 
+        // ✅ GO TO CONTACT PAGE
         navContact.setOnClickListener {
-            startActivity(Intent(this, ContactActivity::class.java))
+            val intent = Intent(this, ContactActivity::class.java)
+            startActivity(intent)
         }
 
-
+        // ✅ GO TO COURSES PAGE
+        navCourses.setOnClickListener {
+            val intent = Intent(this, CoursesActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

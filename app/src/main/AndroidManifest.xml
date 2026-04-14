@@ -21,7 +21,7 @@
 
         <!-- Courses activity -->
         <activity android:name=".CoursesActivity" />
-
+        <activity android:name=".QuoteActivity" />
         <!-- Other activities if any -->
 
 

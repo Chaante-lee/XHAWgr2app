@@ -15,11 +15,21 @@ class CoursesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_courses)
 
         val navHome = findViewById<Button>(R.id.navHome)
+        val navQuote = findViewById<Button>(R.id.navQuote)
+        val navContact = findViewById<Button>(R.id.navContact)
 
         navHome.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-            startActivity(intent)
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+
+        navQuote.setOnClickListener {
+            startActivity(Intent(this, QuoteActivity::class.java))
+            finish()
+        }
+
+        navContact.setOnClickListener {
+            startActivity(Intent(this, ContactActivity::class.java))
         }
 
         // ----- Course 1 -----

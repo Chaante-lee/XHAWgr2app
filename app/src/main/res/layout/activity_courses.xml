@@ -52,7 +52,7 @@
                         android:id="@+id/navHome"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="#3F51B5"
+                        android:backgroundTint="#FF8C00"
                         android:padding="10dp"
                         android:text="Home"
                         android:textColor="#FFFFFF" />
@@ -61,7 +61,7 @@
                         android:id="@+id/navQuote"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="#3F51B5"
+                        android:backgroundTint="#FF8C00"
                         android:padding="10dp"
                         android:text="Get Quote"
                         android:textColor="#FFFFFF" />
@@ -70,279 +70,295 @@
                         android:id="@+id/navContact"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="#3F51B5"
+                        android:backgroundTint="#FF8C00"
                         android:padding="10dp"
                         android:text="Contact"
                         android:textColor="#FFFFFF" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-    <!-- Page Title -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Our Courses"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="#2c3e50"
-            android:layout_gravity="center"
-            android:paddingBottom="16dp"
-            android:padding="10dp"/>
-
-        <!-- 6 WEEK COURSES -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="6 Week short courses"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="#2c3e50"
-            android:paddingBottom="10dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fast-track skill development - R750 per course"
-            android:textColor="#2c3e50"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:paddingBottom="10dp"/>
-
-        <!-- Course 1 -->
         <LinearLayout
-            android:id="@+id/courseBox1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/text_border"
             android:orientation="vertical"
             android:padding="16dp">
 
+            <!-- Page Title -->
             <TextView
-                android:id="@+id/courseTitle1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Child Minding"
+                android:text="Our Courses"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:textColor="#2c3e50"
-                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:paddingBottom="16dp"
+                android:padding="10dp"/>
+
+            <!-- 6 WEEK COURSES -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 Week short courses"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#2c3e50"
+                android:paddingBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fast-track skill development - R750 per course"
+                android:textColor="#2c3e50"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingBottom="10dp"/>
+
+            <!-- Course 1 -->
+            <LinearLayout
+                android:id="@+id/courseBox1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/text_border"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/courseTitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Child Minding"
+                    android:textColor="#2c3e50"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/courseDescription1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Professional childcare training covering child development, safety, nutrition, and age-appropriate activities:\n• Child development Stages\n• Hygiene and safety\n• Nutrition and Meal Planning\n• Educational Activities\n• Emergency Procedures"
+                    android:textColor="#555555"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Course 2 -->
+            <LinearLayout
+                android:id="@+id/courseBox2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/text_border"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/courseTitle2"
+                    android:text="Cooking"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#2c3e50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/courseImage1"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/_000119927" />
+
+                <TextView
+                    android:id="@+id/courseDescription2"
+                    android:text="Comprehensive cooking course covering food preparation, nutrition, menu planning, and kitchen safety. Learn essential culinary techniques, hygiene standards, and meal preparation for various dietary needs and occasions. What you'll learn:\n• Food Preparation Techniques\n• Kitchen Safety and Hygiene\n• Menu Planning\n• Nutritional Awareness\n• Dietary Requirements"
+                    android:textSize="14sp"
+                    android:textColor="#555555"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Course 3 -->
+            <LinearLayout
+                android:id="@+id/courseBox3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/text_border"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/courseTitle3"
+                    android:text="Garden Maintenance"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#2c3e50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/courseDescription3"
+                    android:text="Practical garden maintenance training focusing on essential gardening tasks, plant care, pest control, and seasonal maintenance. Learn to maintain gardens professionally and gain skills for employment in garden services.What you'll learn:\n• Basic Gardening Techniques\n• Plant Care and Watering\n• Pest and Weed Control\n• Tool Maintenance\n• Seasonal Garden Care"
+                    android:textSize="14sp"
+                    android:textColor="#555555"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- 6 MONTH COURSES -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 Month Courses"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#2c3e50"
+                android:paddingTop="16dp"
+                android:paddingBottom="4dp"/>
+
+            <TextView
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text="Advanced skill development programs - R1500 per course"
+                android:textColor="#2c3e50"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/courseDescription1"
-                android:layout_width="wrap_content"
+            <!-- Course 4 -->
+            <LinearLayout
+                android:id="@+id/courseBox4"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Professional childcare training covering child development, safety, nutrition, and age-appropriate activities."
-                android:textColor="#555555"
-                android:textSize="14sp"
-                android:visibility="gone" />
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/text_border"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/courseTitle4"
+                    android:text="First Aid"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#2c3e50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/courseDescription4"
+                    android:text="CPR, emergency response, and injury management training.Comprehensive first aid training covering emergency response, CPR, wound care, and basic life support. Learn to handle medical emergencies with confidence and obtain certification recognized by employers across various industries.What you'll learn:\n• CPR and Basic Life Support\n• Wound Care and Bandaging\n• Emergency Response Procedures\n• Medical Emergency Recognition\n• Safety and Prevention"
+                    android:textSize="14sp"
+                    android:textColor="#555555"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Course 5 -->
+            <LinearLayout
+                android:id="@+id/courseBox5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/text_border"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/courseTitle5"
+                    android:text="Sewing"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#2c3e50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/courseImage2"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/_000119925" />
+
+                <TextView
+                    android:id="@+id/courseDescription5"
+                    android:text="Master the art of sewing from basic stitching to advanced garment construction. Learn to use sewing machines, read patterns, and create professional-quality clothing and alterations. Perfect for those seeking employment in the fashion and textile industry.What You'll Learn:\n• Sewing Machine Operation\n• Pattern Reading and Cutting\n• Garment Construction•Alterations and Repairs\n• Quality Control and Finishing"
+                    android:textSize="14sp"
+                    android:textColor="#555555"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Course 6 -->
+            <LinearLayout
+                android:id="@+id/courseBox6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/text_border"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/courseTitle6"
+                    android:text="Landscaping"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#2c3e50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/courseDescription6"
+                    android:text="Develop professional landscaping skills including garden design, plant care, irrigation systems, and landscape maintenance. Learn sustainable practices and gain practical experience in creating and maintaining beautiful outdoor spaces.What You'll Learn:\n•Garden Design Principles \n•Plant Selection and Care•Irrigation and Drainage \n•Lawn Maintenance \n•Tool Safety and Usage"
+                    android:textSize="14sp"
+                    android:textColor="#555555"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Course 7 -->
+            <LinearLayout
+                android:id="@+id/courseBox7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/text_border"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/courseTitle7"
+                    android:text="Life Skills"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#2c3e50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/courseDescription7"
+                    android:text="Essential life skills training covering communication, financial literacy, time management, problem-solving, and professional development. Build confidence and competence to navigate both personal and professional challenges successfully.What You'll Learn:\n• Effective Communication•Financial Management \n•Time and Stress Management \n•Problem-Solving Skills \n•Professional Development."
+                    android:textSize="14sp"
+                    android:textColor="#555555"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
         </LinearLayout>
-
-        <!-- Course 2 -->
-        <LinearLayout
-            android:id="@+id/courseBox2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/text_border"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/courseTitle2"
-                android:text="Cooking"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#2c3e50"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:id="@+id/courseDescription2"
-                android:text="Comprehensive cooking course covering food preparation, nutrition, and kitchen safety."
-                android:textSize="14sp"
-                android:textColor="#555555"
-                android:visibility="gone"
-                android:layout_marginTop="8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <!-- Course 3 -->
-        <LinearLayout
-            android:id="@+id/courseBox3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/text_border"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/courseTitle3"
-                android:text="Garden Maintenance"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#2c3e50"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:id="@+id/courseDescription3"
-                android:text="Practical garden maintenance training including plant care and pest control."
-                android:textSize="14sp"
-                android:textColor="#555555"
-                android:visibility="gone"
-                android:layout_marginTop="8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <!-- 6 MONTH COURSES -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="6 Month Courses"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="#2c3e50"
-            android:paddingTop="16dp"
-            android:paddingBottom="4dp"/>
-
-        <TextView
-            android:layout_width="285dp"
-            android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:text="Advanced skill development programs - R1500 per course"
-            android:textColor="#2c3e50"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <!-- Course 4 -->
-        <LinearLayout
-            android:id="@+id/courseBox4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/text_border"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/courseTitle4"
-                android:text="First Aid"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#2c3e50"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:id="@+id/courseDescription4"
-                android:text="CPR, emergency response, and injury management training.Comprehensive first aid training covering emergency response, CPR, wound care, and basic life support. Learn to handle medical emergencies with confidence and obtain certification recognized by employers across various industries."
-                android:textSize="14sp"
-                android:textColor="#555555"
-                android:visibility="gone"
-                android:layout_marginTop="8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <!-- Course 5 -->
-        <LinearLayout
-            android:id="@+id/courseBox5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/text_border"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/courseTitle5"
-                android:text="Sewing"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#2c3e50"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:id="@+id/courseDescription5"
-                android:text="Garment construction and sewing skills."
-                android:textSize="14sp"
-                android:textColor="#555555"
-                android:visibility="gone"
-                android:layout_marginTop="8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <!-- Course 6 -->
-        <LinearLayout
-            android:id="@+id/courseBox6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/text_border"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/courseTitle6"
-                android:text="Hairdressing"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#2c3e50"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:id="@+id/courseDescription6"
-                android:text="Hair cutting, styling, and treatment techniques."
-                android:textSize="14sp"
-                android:textColor="#555555"
-                android:visibility="gone"
-                android:layout_marginTop="8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <!-- Course 7 -->
-        <LinearLayout
-            android:id="@+id/courseBox7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/text_border"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/courseTitle7"
-                android:text="Office Administration"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#2c3e50"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:id="@+id/courseDescription7"
-                android:text="Office skills including communication and admin tasks."
-                android:textSize="14sp"
-                android:textColor="#555555"
-                android:visibility="gone"
-                android:layout_marginTop="8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-    </LinearLayout>
     </LinearLayout>
 </ScrollView>
