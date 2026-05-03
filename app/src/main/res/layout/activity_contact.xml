@@ -2,73 +2,78 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f4f6f8">
+    android:background="#f4f6f8"
+    android:fillViewport="true">
 
+    ```
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="114dp"
+            android:layout_height="wrap_content"
             android:background="#1f2d3d"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-            <ImageView
-                android:id="@+id/logoImage"
-                android:layout_width="49dp"
-                android:layout_height="53dp"
-                android:contentDescription="Logo"
-                android:src="@drawable/_000118875" />
+            android:orientation="vertical"
+            android:padding="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/logoImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="Logo"
+                    android:src="@drawable/_000118875" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:text="Empowering the Nation"
                     android:textColor="#FFFFFF"
-                    android:textSize="19sp"
-                    android:textStyle="bold" />
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"/>
+            </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+            <!-- NAV -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/navHome"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:text="Home"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#FF8C00"/>
 
-                    <Button
-                        android:id="@+id/navHome"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="#FF8C00"
-                        android:text="Home"
-                        android:textColor="#FFFFFF" />
+                <Button
+                    android:id="@+id/navQuote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get Quote"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#FF8C00"/>
 
-                    <Button
-                        android:id="@+id/navQuote"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="#FF8C00"
-                        android:text="Get Quote"
-                        android:textColor="#FFFFFF" />
-
-                    <Button
-                        android:id="@+id/navContact"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="#FF8C00"
-                        android:text="Contact"
-                        android:textColor="#FFFFFF" />
-                </LinearLayout>
+                <Button
+                    android:id="@+id/navContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#FF8C00"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -81,35 +86,32 @@
             android:textStyle="bold"
             android:textColor="#2c3e50"
             android:layout_gravity="center"
-            android:paddingBottom="16dp"/>
+            android:layout_marginTop="20dp"/>
 
-        <!-- CONTACT INFO -->
+        <!-- INFO -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="📞 011 123 4567\n📧 info@empoweringnation.co.za"
             android:textSize="16sp"
             android:textColor="#2c3e50"
-            android:paddingBottom="16dp"/>
+            android:layout_marginBottom="16dp"/>
 
-        <!-- DROPDOWN -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select Venue"
-            android:textStyle="bold"/>
-
+        <!-- SPINNER -->
         <Spinner
             android:id="@+id/venueSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <!-- GOOGLE MAP (WEBVIEW) -->
-        <WebView
-            android:id="@+id/mapView"
+        <!-- STATIC MAP -->
+        <ImageView
+            android:id="@+id/mapImage"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:background="#dfe6e9"
+            android:contentDescription="Map"/>
 
         <!-- FORM -->
         <EditText
@@ -129,7 +131,8 @@
             android:id="@+id/messageInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Message"/>
+            android:hint="Message"
+            android:minHeight="100dp"/>
 
         <Button
             android:id="@+id/submitBtn"
@@ -141,4 +144,5 @@
             android:layout_marginTop="16dp"/>
 
     </LinearLayout>
+    ```
 </ScrollView>

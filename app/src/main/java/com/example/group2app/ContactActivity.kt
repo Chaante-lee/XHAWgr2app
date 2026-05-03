@@ -1,10 +1,13 @@
 package com.example.group2app
 
+import android.content.Intent
+import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.webkit.WebView
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import android.content.Intent
+import java.net.URL
+import kotlin.concurrent.thread
 
 class ContactActivity : AppCompatActivity() {
 
@@ -12,62 +15,83 @@ class ContactActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact)
 
+        // ===== NAVIGATION =====
         val navHome = findViewById<Button>(R.id.navHome)
         val navQuote = findViewById<Button>(R.id.navQuote)
+        val navContact = findViewById<Button>(R.id.navContact)
 
         navHome.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
 
         navQuote.setOnClickListener {
-            val intent = Intent(this, QuoteActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, QuoteActivity::class.java))
+            finish()
         }
 
+        // ===== VIEWS =====
         val spinner = findViewById<Spinner>(R.id.venueSpinner)
-        val mapView = findViewById<WebView>(R.id.mapView)
+        val mapImage = findViewById<ImageView>(R.id.mapImage)
 
         val nameInput = findViewById<EditText>(R.id.nameInput)
         val emailInput = findViewById<EditText>(R.id.emailInput)
         val messageInput = findViewById<EditText>(R.id.messageInput)
         val submitBtn = findViewById<Button>(R.id.submitBtn)
 
-        // ✅ VENUES (Johannesburg)
-        val venues = arrayOf(
-            "Sandton Campus - 5th Street, Sandton",
-            "Rosebank Training Centre - Oxford Road",
-            "Braamfontein Skills Hub - Juta Street"
+        // ===== STATIC MAP LINKS =====
+        val mapImages = arrayOf(
+            "https://maps.googleapis.com/maps/api/staticmap?center=Sandton,Johannesburg&zoom=15&size=600x300&markers=color:red|Sandton",
+            "https://maps.googleapis.com/maps/api/staticmap?center=Rosebank,Johannesburg&zoom=15&size=600x300&markers=color:red|Rosebank",
+            "https://maps.googleapis.com/maps/api/staticmap?center=Braamfontein,Johannesburg&zoom=15&size=600x300&markers=color:red|Braamfontein"
         )
 
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, venues)
+        fun loadMap(url: String) {
+            thread {
+                try {
+                    val stream = URL(url).openStream()
+                    val bitmap = BitmapFactory.decodeStream(stream)
+                    runOnUiThread {
+                        mapImage.setImageBitmap(bitmap)
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
+        }
+
+        // initial load
+        loadMap(mapImages[0])
+
+        // ===== SPINNER =====
+        val venues = arrayOf(
+            "Sandton Campus - 5th Street",
+            "Rosebank Training Centre",
+            "Braamfontein Skills Hub"
+        )
+
+        val adapter = ArrayAdapter(
+            this,
+            android.R.layout.simple_spinner_dropdown_item,
+            venues
+        )
+
         spinner.adapter = adapter
 
-        // ✅ MAP SETUP
-        mapView.settings.javaScriptEnabled = true
-
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: android.view.View?, position: Int, id: Long) {
-
-                val mapLinks = arrayOf(
-                    "https://www.google.com/maps?q=Sandton+Johannesburg&output=embed",
-                    "https://www.google.com/maps?q=Rosebank+Johannesburg&output=embed",
-                    "https://www.google.com/maps?q=Braamfontein+Johannesburg&output=embed"
-                )
-
-                mapView.loadUrl(mapLinks[position])
+            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
+                loadMap(mapImages[position])
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 
-        // ✅ FORM VALIDATION
+        // ===== FORM VALIDATION =====
         submitBtn.setOnClickListener {
 
-            val name = nameInput.text.toString()
-            val email = emailInput.text.toString()
-            val message = messageInput.text.toString()
+            val name = nameInput.text.toString().trim()
+            val email = emailInput.text.toString().trim()
+            val message = messageInput.text.toString().trim()
 
             if (name.isEmpty()) {
                 nameInput.error = "Name required"
@@ -85,6 +109,10 @@ class ContactActivity : AppCompatActivity() {
             }
 
             Toast.makeText(this, "Message sent successfully!", Toast.LENGTH_LONG).show()
+
+            nameInput.text.clear()
+            emailInput.text.clear()
+            messageInput.text.clear()
         }
     }
 }
