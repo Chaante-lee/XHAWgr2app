@@ -1,13 +1,11 @@
 package com.example.group2app
 
 import android.content.Intent
-import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import java.net.URL
-import kotlin.concurrent.thread
 
 class ContactActivity : AppCompatActivity() {
 
@@ -39,48 +37,39 @@ class ContactActivity : AppCompatActivity() {
         val messageInput = findViewById<EditText>(R.id.messageInput)
         val submitBtn = findViewById<Button>(R.id.submitBtn)
 
-        // ===== STATIC MAP LINKS =====
-        val mapImages = arrayOf(
-            "https://maps.googleapis.com/maps/api/staticmap?center=Sandton,Johannesburg&zoom=15&size=600x300&markers=color:red|Sandton",
-            "https://maps.googleapis.com/maps/api/staticmap?center=Rosebank,Johannesburg&zoom=15&size=600x300&markers=color:red|Rosebank",
-            "https://maps.googleapis.com/maps/api/staticmap?center=Braamfontein,Johannesburg&zoom=15&size=600x300&markers=color:red|Braamfontein"
-        )
-
-        fun loadMap(url: String) {
-            thread {
-                try {
-                    val stream = URL(url).openStream()
-                    val bitmap = BitmapFactory.decodeStream(stream)
-                    runOnUiThread {
-                        mapImage.setImageBitmap(bitmap)
-                    }
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
-            }
-        }
-
-        // initial load
-        loadMap(mapImages[0])
-
-        // ===== SPINNER =====
+        // ===== LOCATIONS =====
         val venues = arrayOf(
-            "Sandton Campus - 5th Street",
+            "Sandton Campus - 161 Maude Street",
             "Rosebank Training Centre",
             "Braamfontein Skills Hub"
         )
 
-        val adapter = ArrayAdapter(
+        val locations = arrayOf(
+            "161 Maude St, Sandown, Sandton, 2196",
+            "Corner Tyrwhitt and, 24 Cradock Ave, Rosebank, Johannesburg, 2196",
+            "Harrison St, Wanderers View Estate, Johannesburg, 2193"
+        )
+
+        spinner.adapter = ArrayAdapter(
             this,
             android.R.layout.simple_spinner_dropdown_item,
             venues
         )
 
-        spinner.adapter = adapter
+        // ===== OPEN GOOGLE MAPS ON IMAGE CLICK =====
+        var selectedLocation = locations[0]
 
+        mapImage.setOnClickListener {
+            val url = "https://www.google.com/maps/search/?api=1&query=$selectedLocation"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+        }
+
+        // ===== SPINNER HANDLER =====
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
-                loadMap(mapImages[position])
+                selectedLocation = locations[position]
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {}

@@ -11,7 +11,7 @@ class CoursesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_courses)
 
-        // ===== NAVIGATION BUTTONS =====
+        // NAVIGATION BUTTONS
         val navHome = findViewById<Button>(R.id.navHome)
         val navQuote = findViewById<Button>(R.id.navQuote)
         val navContact = findViewById<Button>(R.id.navContact)
@@ -30,7 +30,7 @@ class CoursesActivity : AppCompatActivity() {
             startActivity(Intent(this, ContactActivity::class.java))
         }
 
-        // ===== COURSE NAVIGATION BUTTONS =====
+        // COURSE NAVIGATION BUTTONS
         val btn6WeekCourses = findViewById<Button>(R.id.navCourses6Week)
         val btn6MonthCourses = findViewById<Button>(R.id.navCourses6Month)
 

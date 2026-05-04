@@ -26,6 +26,7 @@
         <activity android:name=".QuoteActivity" />
         <activity android:name=".MonthscoursesActivity" />
         <activity android:name=".WeekscoursesActivity" />
+        <activity android:name=".ContactActivity" />
         <!-- Other activities if any -->
 
 

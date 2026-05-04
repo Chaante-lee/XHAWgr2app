@@ -5,14 +5,12 @@
     android:background="#f4f6f8"
     android:fillViewport="true">
 
-    ```
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="vertical">
 
-        <!-- HEADER -->
+        <!-- HEADER (FULL WIDTH) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -77,72 +75,77 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- TITLE -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Contact Us"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="#2c3e50"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"/>
-
-        <!-- INFO -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="📞 011 123 4567\n📧 info@empoweringnation.co.za"
-            android:textSize="16sp"
-            android:textColor="#2c3e50"
-            android:layout_marginBottom="16dp"/>
-
-        <!-- SPINNER -->
-        <Spinner
-            android:id="@+id/venueSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <!-- STATIC MAP -->
-        <ImageView
-            android:id="@+id/mapImage"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_marginTop="16dp"
-            android:scaleType="centerCrop"
-            android:background="#dfe6e9"
-            android:contentDescription="Map"/>
-
-        <!-- FORM -->
-        <EditText
-            android:id="@+id/nameInput"
+        <!-- CONTENT -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Your Name"/>
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <EditText
-            android:id="@+id/emailInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Your Email"
-            android:inputType="textEmailAddress"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#2c3e50"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
 
-        <EditText
-            android:id="@+id/messageInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Message"
-            android:minHeight="100dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📞 011 123 4567\n📧 info@empoweringnation.co.za"
+                android:textSize="16sp"
+                android:textColor="#2c3e50"
+                android:layout_marginBottom="16dp"/>
 
-        <Button
-            android:id="@+id/submitBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Submit"
-            android:backgroundTint="#FF8C00"
-            android:textColor="#FFFFFF"
-            android:layout_marginTop="16dp"/>
+            <Spinner
+                android:id="@+id/venueSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
+            <!-- CLICKABLE MAP -->
+            <ImageView
+                android:id="@+id/mapImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/map"
+                android:contentDescription="Map Preview"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <EditText
+                android:id="@+id/nameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Name"/>
+
+            <EditText
+                android:id="@+id/emailInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Email"
+                android:inputType="textEmailAddress"/>
+
+            <EditText
+                android:id="@+id/messageInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Message"
+                android:minHeight="100dp"/>
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:backgroundTint="#FF8C00"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
     </LinearLayout>
-    ```
 </ScrollView>
