@@ -10,85 +10,80 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- HEADER (FULL WIDTH) -->
+        <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="114dp"
             android:background="#1f2d3d"
-            android:orientation="vertical"
-            android:padding="12dp">
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="49dp"
+                android:layout_height="53dp"
+                android:contentDescription="Logo"
+                android:src="@drawable/_000118875" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-                <ImageView
-                    android:id="@+id/logoImage"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:contentDescription="Logo"
-                    android:src="@drawable/_000118875" />
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="Empowering the Nation"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginStart="10dp"/>
-            </LinearLayout>
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
 
-            <!-- NAV -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="10dp">
-
-                <!-- BACK BUTTON (LEFT) -->
-                <ImageView
-                    android:id="@+id/btnBack"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:src="@android:drawable/ic_media_previous"
-                    android:tint="#FFFFFF"
-                    android:contentDescription="Back"
-                    android:padding="4dp"
-                    android:layout_marginEnd="8dp"/>
-
-                <Button
-                    android:id="@+id/navHome"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Home"
-                    android:textColor="#FFFFFF"
-                    android:backgroundTint="#FF8C00"/>
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/navQuote"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Get Quote"
-                    android:textColor="#FFFFFF"
-                    android:backgroundTint="#FF8C00"/>
+                    <ImageView
+                        android:id="@+id/btnBack"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@android:drawable/ic_media_previous"
+                        android:tint="#FFFFFF"
+                        android:contentDescription="Back"
+                        android:padding="4dp"
+                        android:layout_marginEnd="8dp"/>
 
-                <Button
-                    android:id="@+id/navContact"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Contact"
-                    android:textColor="#FFFFFF"
-                    android:backgroundTint="#FF8C00"/>
+                    <Button
+                        android:id="@+id/navHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Home"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#FF8C00"/>
+
+                    <Button
+                        android:id="@+id/navQuote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Get Quote"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#FF8C00"/>
+
+                    <Button
+                        android:id="@+id/navContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#FF8C00"/>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
-        <!-- CONTENT -->
+        <!-- CONTENT (unchanged) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -108,7 +103,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="📞 011 123 4567\n📧 info@empoweringnation.co.za"
+                android:text="📞 011 123 4567\n📧 info@empoweringthenation.co.za"
                 android:textSize="16sp"
                 android:textColor="#2c3e50"
                 android:layout_marginBottom="16dp"/>
@@ -118,7 +113,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-            <!-- CLICKABLE MAP -->
             <ImageView
                 android:id="@+id/mapImage"
                 android:layout_width="match_parent"
