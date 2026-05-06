@@ -6,6 +6,7 @@ import android.widget.CheckBox
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
+import android.widget.ImageView
 
 class QuoteActivity : AppCompatActivity() {
 
@@ -16,6 +17,11 @@ class QuoteActivity : AppCompatActivity() {
 
         val navHome = findViewById<Button>(R.id.navHome)
         val navContact = findViewById<Button>(R.id.navContact)
+        val btnBack = findViewById<ImageView>(R.id.btnBack)
+
+        btnBack.setOnClickListener {
+            finish()
+        }
 
         navHome.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))

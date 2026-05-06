@@ -3,6 +3,7 @@ package com.example.group2app
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 class CoursesActivity : AppCompatActivity() {
@@ -15,6 +16,12 @@ class CoursesActivity : AppCompatActivity() {
         val navHome = findViewById<Button>(R.id.navHome)
         val navQuote = findViewById<Button>(R.id.navQuote)
         val navContact = findViewById<Button>(R.id.navContact)
+        val btnBack = findViewById<ImageView>(R.id.btnBack)
+
+        btnBack.setOnClickListener {
+            finish()
+        }
+
 
         navHome.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))

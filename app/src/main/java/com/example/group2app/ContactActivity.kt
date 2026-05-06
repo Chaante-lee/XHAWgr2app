@@ -17,6 +17,11 @@ class ContactActivity : AppCompatActivity() {
         val navHome = findViewById<Button>(R.id.navHome)
         val navQuote = findViewById<Button>(R.id.navQuote)
         val navContact = findViewById<Button>(R.id.navContact)
+        val btnBack = findViewById<ImageView>(R.id.btnBack)
+
+        btnBack.setOnClickListener {
+            finish()
+        }
 
         navHome.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
