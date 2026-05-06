@@ -187,10 +187,9 @@
                     android:layout_height="wrap_content"
                     android:hint="Email Address"
                     android:inputType="textEmailAddress"/>
-
             </LinearLayout>
 
-            <!-- BUTTON -->
+                    <!-- BUTTON -->
             <Button
                 android:id="@+id/calcButton"
                 android:layout_width="match_parent"
