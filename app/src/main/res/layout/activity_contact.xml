@@ -141,25 +141,25 @@
                     android:textColor="#2c3e50"/>
 
 
-                <EditText
-                android:id="@+id/nameInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Your Name"/>
+                 <EditText
+                 android:id="@+id/nameInput"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:hint="Your Name"/>
 
-            <EditText
-                android:id="@+id/emailInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Your Email"
-                android:inputType="textEmailAddress"/>
+                 <EditText
+                 android:id="@+id/emailInput"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:hint="Your Email"
+                 android:inputType="textEmailAddress"/>
 
-            <EditText
-                android:id="@+id/messageInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Message"
-                android:minHeight="100dp"/>
+                 <EditText
+                 android:id="@+id/messageInput"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:hint="Message"
+                 android:minHeight="100dp"/>
             </LinearLayout>
 
             <Button
