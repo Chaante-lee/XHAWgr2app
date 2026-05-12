@@ -11,32 +11,32 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // ✅ NAV BUTTONS
+        //  NAV BUTTONS
         val navHome = findViewById<Button>(R.id.navHome)
         val navQuote = findViewById<Button>(R.id.navQuote)
         val navContact = findViewById<Button>(R.id.navContact)
         val navCourses = findViewById<Button>(R.id.navCourses)
 
-        // ✅ HOME (reloads current page)
+        //  HOME
         navHome.setOnClickListener {
             // already on home, so just refresh
             startActivity(Intent(this, MainActivity::class.java))
         }
 
 
-        // ✅ GO TO QUOTE PAGE
+        //  GO TO QUOTE PAGE
         navQuote.setOnClickListener {
             val intent = Intent(this, QuoteActivity::class.java)
             startActivity(intent)
         }
 
-        // ✅ GO TO CONTACT PAGE
+        //  GO TO CONTACT PAGE
         navContact.setOnClickListener {
             val intent = Intent(this, ContactActivity::class.java)
             startActivity(intent)
         }
 
-        // ✅ GO TO COURSES PAGE
+        //  GO TO COURSES PAGE
         navCourses.setOnClickListener {
             val intent = Intent(this, CoursesActivity::class.java)
             startActivity(intent)

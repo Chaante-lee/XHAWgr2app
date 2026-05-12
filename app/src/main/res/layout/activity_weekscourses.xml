@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:background="#f4f6f8">
 
-        <!-- HEADER (FULL WIDTH, NO PADDING) -->
+        <!-- HEADER  -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="114dp"
@@ -39,7 +39,7 @@
                 android:contentDescription="Logo"
                 android:src="@drawable/_000118875" />
 
-            <!-- TEXT + NAV -->
+            <!-- NAV -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
