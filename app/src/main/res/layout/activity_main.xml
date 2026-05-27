@@ -13,75 +13,68 @@
         android:background="#f4f6f8">
 
         <!-- HEADER -->
+        <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="107dp"
+            android:layout_height="wrap_content"
             android:background="#1f2d3d"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
+            android:gravity="center"
+            android:orientation="vertical"
             android:padding="10dp">
 
+            <!-- TITLE -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="Empowering the Nation"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                android:textStyle="bold" />
 
-            <!-- TITLE + NAVIGATION -->
+            <!-- NAVIGATION -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                <!-- TITLE / LOGO -->
-
-                <!-- NAVIGATION -->
-                <TextView
+                <Button
+                    android:id="@+id/navHome"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="                     Empowering the Nation"
-                    android:textColor="#FFFFFF"
-                    android:textSize="19sp"
-                    android:textStyle="bold" />
+                    android:backgroundTint="#FF8C00"
+                    android:padding="10dp"
+                    android:text="Home"
+                    android:textColor="#FFFFFF" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <Button
+                    android:id="@+id/navQuote"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:backgroundTint="#FF8C00"
+                    android:padding="10dp"
+                    android:text="Get Quote"
+                    android:textColor="#FFFFFF" />
 
-                    <Button
-                        android:id="@+id/navHome"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="#FF8C00"
-                        android:padding="10dp"
-                        android:text="Home"
-                        android:textColor="#FFFFFF" />
-
-                    <Button
-                        android:id="@+id/navQuote"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="#FF8C00"
-                        android:padding="10dp"
-                        android:text="Get Quote"
-                        android:textColor="#FFFFFF" />
-
-                    <Button
-                        android:id="@+id/navContact"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="#FF8C00"
-                        android:padding="10dp"
-                        android:text="Contact"
-                        android:textColor="#FFFFFF" />
-                </LinearLayout>
+                <Button
+                    android:id="@+id/navContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FF8C00"
+                    android:padding="10dp"
+                    android:text="Contact"
+                    android:textColor="#FFFFFF" />
             </LinearLayout>
-        </LinearLayout>
 
+        </LinearLayout>
         <!-- MAIN CONTENT -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:gravity="center"
+            android:orientation="vertical"
             android:padding="20dp">
 
             <ImageView
@@ -89,19 +82,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="229dp"
                 android:layout_marginTop="8dp"
-                android:scaleType="centerCrop"
-                android:background="@drawable/text_border"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
                 android:elevation="8dp"
-                android:src="@drawable/_000118875" />
+                android:src="@drawable/_000118875"/>
 
             <TextView
                 android:layout_width="411dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:padding="20dp"
                 android:text="Through Quality Skills Training."
                 android:textColor="#2c3e50"
                 android:textSize="24sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -119,8 +113,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:background="@drawable/text_border"
-                android:orientation="vertical"
                 android:elevation="8dp"
+                android:orientation="vertical"
                 android:padding="16dp">
 
                 <TextView
@@ -147,8 +141,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:background="@drawable/text_border"
-                android:orientation="vertical"
                 android:elevation="8dp"
+                android:orientation="vertical"
                 android:padding="16dp">
 
                 <TextView
@@ -203,8 +197,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:background="@drawable/text_border"
-                android:orientation="vertical"
                 android:elevation="8dp"
+                android:orientation="vertical"
                 android:padding="16dp">
 
                 <TextView
@@ -249,11 +243,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
                 android:gravity="center"
                 android:text="We are committed to providing quality education and training that makes a real difference in people's lives."
                 android:textColor="#555555"
-                android:textSize="16sp"
-                android:layout_marginBottom="20dp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
     </LinearLayout>
